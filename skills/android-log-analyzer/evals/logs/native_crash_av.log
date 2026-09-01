@@ -1,0 +1,37 @@
+04-13 09:14:02.115  6678  6678 D MainActivity: 门口机 8002 视频呼入, 跳转 TalkActivity
+04-13 09:14:02.301  6678  6678 D TalkActivity: onCreate, caller=8002, video=true
+04-13 09:14:02.455  6678  6678 I TalkVM: 接听视频呼叫, 初始化解码器
+04-13 09:14:02.612  6678  6720 I libdnake_sip: sip_invite ok, remote=8002@192.168.1.100
+04-13 09:14:02.803  6678  6720 I libdnake_av: open h264 decoder, 1280x720
+04-13 09:14:03.001  6678  6721 D libdnake_av: rtp recv thread start, port=40210
+04-13 09:14:03.350  6678  6721 D libdnake_av: first frame decoded, pts=0
+04-13 09:14:05.912  6678  6721 W libdnake_av: rtp seq jump: 1022 -> 3051
+04-13 09:14:05.913  6678  6721 W libdnake_av: frame incomplete, drop
+04-13 09:14:06.104  6678  6721 W libdnake_av: rtp seq jump: 3055 -> 88
+04-13 09:14:06.301  6678  6745 F libc    : Fatal signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0 in tid 6745 (av_decode), pid 6678 (com.dnake.panel)
+04-13 09:14:06.412  6789  6789 I crash_dump64: obtaining output fd from tombstoned
+04-13 09:14:06.415   812   812 I tombstoned: received crash request for pid 6678
+04-13 09:14:06.522  6789  6789 I DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+04-13 09:14:06.522  6789  6789 I DEBUG   : Build fingerprint: 'dnake/overseas_talk/overseas_talk:12/SKQ1.220401.001/eng.dev.20260401:userdebug/test-keys'
+04-13 09:14:06.522  6789  6789 I DEBUG   : Revision: '0'
+04-13 09:14:06.522  6789  6789 I DEBUG   : ABI: 'arm64'
+04-13 09:14:06.522  6789  6789 I DEBUG   : Timestamp: 2026-04-13 09:14:06.301 +0800
+04-13 09:14:06.522  6789  6789 I DEBUG   : pid: 6678, tid: 6745, name: av_decode  >>> com.dnake.panel <<<
+04-13 09:14:06.522  6789  6789 I DEBUG   : uid: 10086
+04-13 09:14:06.523  6789  6789 I DEBUG   : signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0000000000000000
+04-13 09:14:06.523  6789  6789 I DEBUG   : Cause: null pointer dereference
+04-13 09:14:06.523  6789  6789 I DEBUG   :     x0  0000000000000000  x1  0000007ac12f1000  x2  00000000000004e0  x3  0000000000000000
+04-13 09:14:06.523  6789  6789 I DEBUG   :     x4  0000000000000003  x5  0000007ac12f14e0  x6  0000000000000000  x7  0000000000000000
+04-13 09:14:06.523  6789  6789 I DEBUG   : backtrace:
+04-13 09:14:06.523  6789  6789 I DEBUG   :       #00 pc 000000000004a1c8  /data/app/~~xx==/com.dnake.panel/lib/arm64/libdnake_av.so (h264_decode_frame+152)
+04-13 09:14:06.523  6789  6789 I DEBUG   :       #01 pc 000000000004b330  /data/app/~~xx==/com.dnake.panel/lib/arm64/libdnake_av.so (av_decode_loop+96)
+04-13 09:14:06.523  6789  6789 I DEBUG   :       #02 pc 00000000000215f4  /data/app/~~xx==/com.dnake.panel/lib/arm64/libdnake_av.so (Java_com_dnake_panel_media_AvNative_decodeLoop+48)
+04-13 09:14:06.524  6789  6789 I DEBUG   :       #03 pc 0000000000222244  /apex/com.android.art/lib64/libart.so (art_quick_generic_jni_trampoline+148)
+04-13 09:14:06.524  6789  6789 I DEBUG   :       #04 pc 0000000000218be8  /apex/com.android.art/lib64/libart.so (art_quick_invoke_stub+584)
+04-13 09:14:06.524  6789  6789 I DEBUG   :       #05 pc 00000000002847f0  /apex/com.android.art/lib64/libart.so (art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)+140)
+04-13 09:14:06.524  6789  6789 I DEBUG   :       #06 pc 00000000005a2b94  /apex/com.android.art/lib64/libart.so (art::Thread::CreateCallback(void*)+1292)
+04-13 09:14:06.524  6789  6789 I DEBUG   :       #07 pc 00000000000eb7a8  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+64)
+04-13 09:14:06.524  6789  6789 I DEBUG   :       #08 pc 000000000008bc8c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+64)
+04-13 09:14:06.610   812   812 W tombstoned: crash log written to /data/tombstones/tombstone_07
+04-13 09:14:06.812  1234  1456 I ActivityManager: Process com.dnake.panel (pid 6678) has died: vis +99TOP
+04-13 09:14:06.813  1234  1456 W ActivityManager: Scheduling restart of crashed service com.dnake.panel/.service.KeepAliveService in 1080ms
