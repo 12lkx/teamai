@@ -1,0 +1,54 @@
+04-12 14:05:10.220  8812  8812 D SetActivity: 进入系统设置
+04-12 14:05:12.510  8812  8812 D SetAboutActivity: onCreate
+04-12 14:05:12.715  8812  8812 I SetAboutVM: 读取当前版本 versionName=2.3.1-alpha
+04-12 14:05:15.330  8812  8812 D SetAboutActivity: 用户点击"检查更新"
+04-12 14:05:15.331  8812  8812 I SetAboutVM: checkUpgrade start
+04-12 14:05:15.402  8812  8812 D OkHttp: --> GET https://ota.example.com/api/v2/upgrade/check?udid=a0b1c2d3e4f5
+04-12 14:05:18.900  8812  8812 I Choreographer: Skipped 214 frames!  The application may be doing too much work on its main thread.
+04-12 14:05:21.120  8812  8812 I Choreographer: Skipped 131 frames!  The application may be doing too much work on its main thread.
+04-12 14:05:25.450  8812  8830 W ActivityManager: Timeout executing service: ServiceRecord{com.dnake.panel/.service.KeepAliveService}
+04-12 14:05:26.012  8812  8812 I Choreographer: Skipped 289 frames!  The application may be doing too much work on its main thread.
+04-12 14:05:31.778  1234  1456 E ActivityManager: ANR in com.dnake.panel (com.dnake.panel/.ui.setting.SetAboutActivity)
+04-12 14:05:31.778  1234  1456 E ActivityManager: PID: 8812
+04-12 14:05:31.778  1234  1456 E ActivityManager: Reason: Input dispatching timed out (Waiting to send non-key event because the touched window has not finished processing certain input events that were delivered to it over 500.0ms ago.  Wait queue length: 3.  Wait queue head age: 8642.4ms.)
+04-12 14:05:31.778  1234  1456 E ActivityManager: Load: 3.4 / 2.9 / 2.1
+04-12 14:05:31.778  1234  1456 E ActivityManager: CPU usage from 0ms to 8312ms later:
+04-12 14:05:31.778  1234  1456 E ActivityManager:   45% 8812/com.dnake.panel: 38% user + 7% kernel / faults: 1821 minor
+04-12 14:05:31.778  1234  1456 E ActivityManager: ----- thread dump: com.dnake.panel -----
+04-12 14:05:31.779  1234  1456 E ActivityManager: "main" prio=5 tid=1 Runnable
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at java.net.SocketInputStream.socketRead0(Native Method)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at java.net.SocketInputStream.socketRead(SocketInputStream.java:119)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at java.net.SocketInputStream.read(SocketInputStream.java:176)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at com.android.org.conscrypt.ConscryptEngineSocket$SSLInputStream.read(ConscryptEngineSocket.java:358)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at okio.InputStreamSource.read(Okio.kt:102)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:159)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at okio.RealBufferedSource.request(RealBufferedSource.kt:62)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at okio.RealBufferedSource.require(RealBufferedSource.kt:55)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at okhttp3.internal.http2.Http2Reader.nextFrame(Http2Reader.kt:89)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at okhttp3.internal.http2.Http2Connection$ReaderRunnable.execute(Http2Connection.kt:618)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at okhttp3.internal.connection.RealCall.execute(RealCall.kt:101)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at retrofit2.OkHttpCall.execute(OkHttpCall.java:204)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at retrofit2.DefaultCallAdapterFactory$ExecutorCallbackCall.execute(DefaultCallAdapterFactory.java:101)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at com.dnake.panel.retrofit.ApiHelper.syncGet(ApiHelper.kt:210)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at com.dnake.panel.ui.setting.vm.SetAboutVM.checkUpgrade(SetAboutVM.kt:96)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at com.dnake.panel.ui.setting.SetAboutActivity.onClick(SetAboutActivity.kt:64)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at android.view.View.performClick(View.java:7448)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at android.view.View.performClickInternal(View.java:7425)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at android.view.View.access$3600(View.java:810)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at android.view.View$PerformClick.run(View.java:28305)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at android.os.Handler.handleCallback(Handler.java:938)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at android.os.Handler.dispatchMessage(Handler.java:99)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at android.os.Looper.loopOnce(Looper.java:201)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at android.os.Looper.loop(Looper.java:288)
+04-12 14:05:31.779  1234  1456 E ActivityManager:   at android.app.ActivityThread.main(ActivityThread.java:7870)
+04-12 14:05:31.780  1234  1456 E ActivityManager: "DefaultDispatcher-worker-1" prio=5 tid=14 Waiting
+04-12 14:05:31.780  1234  1456 E ActivityManager:   at jdk.internal.misc.Unsafe.park(Native Method)
+04-12 14:05:31.780  1234  1456 E ActivityManager:   at java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+04-12 14:05:31.780  1234  1456 E ActivityManager:   at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park(CoroutineScheduler.kt:838)
+04-12 14:05:31.780  1234  1456 E ActivityManager: "OkHttp https://ota.example.com/..." prio=5 tid=19 Runnable
+04-12 14:05:31.780  1234  1456 E ActivityManager:   at java.net.SocketInputStream.socketRead0(Native Method)
+04-12 14:05:31.780  1234  1456 E ActivityManager:   at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:159)
+04-12 14:05:33.102  8812  8812 D OkHttp: <-- 200 OK https://ota.example.com/api/v2/upgrade/check (17771ms)
+04-12 14:05:33.105  8812  8812 I SetAboutVM: checkUpgrade done, hasNewVersion=false
+04-12 14:05:33.210  1234  1456 W ActivityManager:   Force finishing activity com.dnake.panel/.ui.setting.SetAboutActivity
+04-12 14:05:33.330  8812  8812 I Process : Sending signal. PID: 8812 SIG: 9

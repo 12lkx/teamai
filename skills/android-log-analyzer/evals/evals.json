@@ -1,0 +1,26 @@
+{
+  "skill_name": "android-log-analyzer",
+  "evals": [
+    {
+      "id": 1,
+      "name": "npe-talkvm-crash",
+      "prompt": "现场设备上应用老是闪退，我让现场导了一份日志出来：C:\\Users\\dnake\\.claude\\skills\\android-log-analyzer\\evals\\logs\\crash_npe_talkvm.log。帮我分析下是什么原因导致的，项目在 E:\\dnake-compose\\OverseasTalk。",
+      "expected_output": "识别出 FATAL EXCEPTION（Java 崩溃），根因是 TalkVM.onCallStateChanged 中对空 session 的处理（最深层 Caused by: NullPointerException，TalkVM.kt:132），结合日志前置事件（TalkEvent 回调 state=ANSWERED 但 session=null）说明触发路径，关联项目源码 E:\\dnake-compose\\OverseasTalk 中 TalkVM.kt / TalkEvent.kt，输出结构化报告并给出修复建议（如空值判断/事件过滤）",
+      "files": ["C:\\Users\\dnake\\.claude\\skills\\android-log-analyzer\\evals\\logs\\crash_npe_talkvm.log"]
+    },
+    {
+      "id": 2,
+      "name": "anr-setabout",
+      "prompt": "测试反馈：设置页点\"检查更新\"后整个应用卡死，几秒后被系统杀掉。日志在 C:\\Users\\dnake\\.claude\\skills\\android-log-analyzer\\evals\\logs\\anr_setabout.log，项目源码在 E:\\dnake-compose\\OverseasTalk，帮我定位下问题。",
+      "expected_output": "识别出 ANR（Input dispatching timed out），根因是主线程执行了同步网络请求：SetAboutActivity.onClick -> SetAboutVM.checkUpgrade(SetAboutVM.kt:96) -> ApiHelper.syncGet -> RealCall.execute，主线程堆栈阻塞在 SocketInputStream.socketRead0。佐证：Skipped frames 警告、17.7 秒的 HTTP 请求。关联源码并给出修复建议（改为异步/协程/Retrofit enqueue）",
+      "files": ["C:\\Users\\dnake\\.claude\\skills\\android-log-analyzer\\evals\\logs\\anr_setabout.log"]
+    },
+    {
+      "id": 3,
+      "name": "native-av-crash",
+      "prompt": "视频对讲一接通就崩溃，抓到的日志在 C:\\Users\\dnake\\.claude\\skills\\android-log-analyzer\\evals\\logs\\native_crash_av.log，项目在 E:\\dnake-compose\\OverseasTalk。帮忙定位问题出在哪。",
+      "expected_output": "识别出 native 崩溃（signal 11 SIGSEGV, null pointer dereference），发生在 av_decode 线程的 libdnake_av.so 中 h264_decode_frame+152，经由 JNI 入口 Java_com_dnake_panel_media_AvNative_decodeLoop。结合崩溃前日志（rtp seq jump / frame incomplete drop）推断与丢包导致的不完整帧传入解码器相关，指出需要带符号表的 so 进一步定位，并给出修复建议（解码前帧完整性校验、空指针防护）",
+      "files": ["C:\\Users\\dnake\\.claude\\skills\\android-log-analyzer\\evals\\logs\\native_crash_av.log"]
+    }
+  ]
+}
