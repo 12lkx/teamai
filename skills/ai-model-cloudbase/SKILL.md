@@ -1,5 +1,10 @@
 ---
 name: ai-model-cloudbase
+description: name: ai-model-cloudbase
+---
+
+---
+name: ai-model-cloudbase
 description: Complete guide for calling AI models with CloudBase - covers JS/Node SDK and WeChat Mini Program. Text generation, streaming, and image generation.
 alwaysApply: false
 ---
