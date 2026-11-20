@@ -1,4 +1,9 @@
 ---
+name: auth-wechat
+description: name: auth-wechat-miniprogram
+---
+
+---
 name: auth-wechat-miniprogram
 description: Complete guide for WeChat Mini Program authentication with CloudBase - native login, user identity, and cloud function integration.
 alwaysApply: false

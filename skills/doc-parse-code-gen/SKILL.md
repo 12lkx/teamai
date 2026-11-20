@@ -1,5 +1,10 @@
 ---
 name: doc-parse-code-gen
+description: name: doc-parse-code-gen
+---
+
+---
+name: doc-parse-code-gen
 description: |
   文档解析代码生成助手。当用户需要从 Word(.docx)/PDF/Excel(.xlsx) 文档中提取内容，并根据指定片段生成 Java/Kotlin 代码时使用。
   触发场景包括：

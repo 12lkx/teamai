@@ -1,5 +1,10 @@
 ---
 name: cloud-functions
+description: name: cloud-functions
+---
+
+---
+name: cloud-functions
 description: Complete guide for CloudBase cloud functions development - runtime selection, deployment, logging, invocation, and HTTP access configuration.
 alwaysApply: false
 ---

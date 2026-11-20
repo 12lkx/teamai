@@ -1,4 +1,9 @@
 ---
+name: auth-http-api
+description: name: auth-http-api-cloudbase
+---
+
+---
 name: auth-http-api-cloudbase
 description: Use when you need to implement CloudBase Auth v2 over raw HTTP endpoints (login/signup, tokens, user operations) from backends or scripts that are not using the Web or Node SDKs.
 alwaysApply: false

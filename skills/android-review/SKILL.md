@@ -1,5 +1,10 @@
 ---
 name: android-review
+description: name: android-review
+---
+
+---
+name: android-review
 description: |
   当用户要求“分析代码”“review”“检查这段代码”或表达等价意图时触发。
   精通 Java 和 Kotlin 双语言，熟悉 Android 全栈开发，对提供的 Java 或 Kotlin 代码进行全面审查。
