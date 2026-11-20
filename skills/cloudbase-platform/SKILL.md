@@ -1,5 +1,10 @@
 ---
 name: cloudbase-platform
+description: name: cloudbase-platform
+---
+
+---
+name: cloudbase-platform
 description: CloudBase platform knowledge and best practices. Use this skill for general CloudBase platform understanding, including storage, hosting, authentication, cloud functions, database permissions, and data models.
 alwaysApply: false
 ---

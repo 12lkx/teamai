@@ -1,5 +1,10 @@
 ---
 name: android-log-analyzer
+description: name: android-log-analyzer
+---
+
+---
+name: android-log-analyzer
 description: 分析 Android logcat 日志与崩溃日志（Java/Kotlin 崩溃、FATAL EXCEPTION、ANR、native crash/tombstone、OOM 等），定位根因到具体类/方法/行号，结合当前项目源码给出修复建议和结构化分析报告。当用户提供日志文件路径、要求分析崩溃/闪退/卡死/ANR/logcat/异常堆栈/tombstone，或反馈"应用挂了/闪退/没反应"需要排查日志时，必须使用本技能。即使用户没有明确说"分析日志"，只要任务涉及从日志中定位 Android 应用问题，也应使用本技能。
 ---
 

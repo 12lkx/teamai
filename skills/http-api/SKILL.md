@@ -1,4 +1,9 @@
 ---
+name: http-api
+description: name: http-api-cloudbase
+---
+
+---
 name: http-api-cloudbase
 description: Use CloudBase HTTP API to access CloudBase platform features (database, authentication, cloud functions, cloud hosting, cloud storage, AI) via HTTP protocol from backends or scripts that are not using SDKs.
 alwaysApply: false

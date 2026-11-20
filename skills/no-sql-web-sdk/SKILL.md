@@ -1,4 +1,9 @@
 ---
+name: no-sql-web-sdk
+description: name: cloudbase-document-database-web-sdk
+---
+
+---
 name: cloudbase-document-database-web-sdk
 description: Use CloudBase document database Web SDK to query, create, update, and delete data. Supports complex queries, pagination, aggregation, and geolocation queries.
 ---

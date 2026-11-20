@@ -1,5 +1,10 @@
 ---
 name: web-development
+description: name: web-development
+---
+
+---
+name: web-development
 description: Web frontend project development rules. Use this skill when developing web frontend pages, deploying static hosting, and integrating CloudBase Web SDK.
 alwaysApply: false
 ---

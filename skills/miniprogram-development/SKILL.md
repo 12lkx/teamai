@@ -1,5 +1,10 @@
 ---
 name: miniprogram-development
+description: name: miniprogram-development
+---
+
+---
+name: miniprogram-development
 description: WeChat Mini Program development rules. Use this skill when developing WeChat mini programs, integrating CloudBase capabilities, and deploying mini program projects.
 alwaysApply: false
 ---
